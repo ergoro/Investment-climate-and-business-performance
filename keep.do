@@ -1,4 +1,56 @@
 *keep
+/*
+*Analizyng Export and Import Data
+sort reporteriso commoditycode year
+sort reporteriso commoditycode
+by reporteriso commoditycode: egen avg_cc=mean(tradevalueus)
+collapse tradevalueus , by(reporteriso commoditycode commodity avg_cc)
+sort reporteriso
+by reporteriso: egen etotal=max(tradevalueus)
+gen ec_per=(tradevalueus/etotal)*100
+
+encode commoditycode, gen(cc)
+encode reporteriso, gen(id)
+
+preserve
+drop if cc==11
+#delimit ;
+twoway 
+	scatter ec_per cc if id==1, connect(1) 
+	|| scatter ec_per cc if id==2, connect(1) msymbol(circle) lpattern(solid)
+	|| scatter ec_per cc if id==3, connect(1) msymbol(diamond) lpattern(dash) 
+	|| scatter ec_per cc if id==4, connect(1) msymbol(triangle) lpattern(dot)
+	|| scatter ec_per cc if id==5, connect(1) msymbol(square) lpattern(dash_dot)
+	|| scatter ec_per cc if id==6, connect(1) msymbol(plus) lpattern(solid)
+	|| scatter ec_per cc if id==7, connect(1) msymbol(circle) lpattern(dash)
+	|| scatter ec_per cc if id==8, connect(1) msymbol(diamond) lpattern(dot)
+	|| scatter ec_per cc if id==9, connect(1) msymbol(triangle) lpattern(dash_dot)
+	|| scatter ec_per cc if id==10, connect(1) msymbol(square) lpattern(solid)
+	|| scatter ec_per cc if id==11, connect(1) msymbol(plus) lpattern(dash)
+	|| scatter ec_per cc if id==12, connect(1) lpattern(dot)
+	legend(col(6) label(1 "ARG") label(2 "BOL") label(3 "CHL") label(4 "COL") label(5 "ECU") label(6 "GTM")
+			label(7 "MEX") label(8 "PAN") label(9 "PER") label(10 "PRY") label(11 "SLV") label(12 "URY") textwidth(*2) size(vsmall)) 
+	xlabel(1 "Food and live animals" 
+	2 `" "Beverages,"  "and tobaco" "'
+	3 `" "Crude materials,"  "inedible, except fuels" "' 
+	4 `" "Mineral fuels, lubricants"  "and related materials" "' 
+	5 `" "Animal and vegetable"  "oils, fats and waxes" "' 
+	6 `" "Chemicals and related"  "products, n.e.s." "'
+	7 `" "Manufactured goods"  "classified chiefly" "by material" "'
+	8 `" "Machinery and"  "transport equipment" "'
+	9 `" "Miscellaneous"  "manufactured articles" "'
+	10 `" "Commodities and"  "transactions not classified" "elsewhere in the SITC" "', angle(vertical) labsize(small)) 
+	ylabel(,labsize(small))
+	ytitle("") 
+	xtitle("")
+  ;
+#delimit cr
+*ytitle("Trade Value - Percentage of Total", size(vsmall) margin(large)) 
+*xtitle("SITC")
+restore
+*/
+
+
 quietly{
 *Keep only LAC
 drop if (region==1 | region==2 | region==3 | region==5 | region==6)
