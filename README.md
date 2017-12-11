@@ -1,7 +1,7 @@
 ## Investment-climate-and-business-performance
 
 ## 1. Project Overview
-This research project has two research modules using Stata and Enterprise Surveys data:
+This research project executes the analyses below using Stata and Enterprise Surveys data:
 1. Estimation of business performance
 - Productivity (methods: Ordinary Least Squares (OLS), Generalized Estimated Equation (GEE), Random Effects (RE), Fixed Effects (FE), Levinsohn and Petrin (LP), Ackerberg, Caves and Frazer (ACF) and a non-parametric (Stochastic))
 - Average wages
