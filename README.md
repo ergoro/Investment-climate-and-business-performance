@@ -14,7 +14,7 @@ Including an Instrumental Variables procedure
 ## 2. Data Sources and sample
 The data source is the World Bank's Enterprise Survey (ES) dataset for eight countries corresponding to the years 2006 and 2010 (unbalanced panel data). ES provides an extensive array of data at the firm level. For instance, useful information for measuring firms' performance and aspects of the investment climate, among others, could be found. Data is collected from a representative sample of an economy's private sector. Through a stratified random sample process, firms in the manufacturing and services sectors in major cities and localities are selected (data does not include the agricultural sector). More info at Enterprise Surveys (http://www.enterprisesurveys.org), The World Bank.
 
-After cleaning procedure (including post-estmation of outliers), a sector at the 4 digit level ISIC code was selected based on the homogeneity, significance and number of observations. The selected sector is ISIC 1810 (Manufacture of wearing apparel; dressing and dyeing of fur)
+After cleaning procedure (including post-estmation of outliers), a sector at the 4 digit level ISIC code was selected based on the homogeneity, significance and number of observations. The selected sector is ISIC 1810 (Manufacture of wearing apparel; dressing and dyeing of fur).
 
 ## 3. Structuring and generating data
 
@@ -32,7 +32,7 @@ This module contains four sections
 - Inputs
   - [Data from previous step (.dta file)]
 - Code
-  - [master](https://github.com/cmg777/firm-tfp-convergence-brazil/blob/master/Estimating_TFP/pdf_brazil_tfp_main.do)
+  - [generating variables](https://github.com/cmg777/firm-tfp-convergence-brazil/blob/master/Estimating_TFP/pdf_brazil_tfp_main.do)
 - Outputs
   - [Dataset ready for cleaning (.dta file)]
   
@@ -70,7 +70,7 @@ This module contains four sections
 - [Outputs]
   - [Dataset with analysis results (.dta file)]
   
-  ## 6. Exploring causality, Instrumental Variables (IV) procedure
+ ## 6. Exploring causality, Instrumental Variables (IV) procedure
  
 - [Inputs]
   - [Data from previous step (.dta file)]
