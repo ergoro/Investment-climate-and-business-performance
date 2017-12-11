@@ -22,9 +22,9 @@ This module contains four sections
 
 ### Select countries
 - Inputs
-  - [Data (.dta file)](https://github.com/cmg777/firm-tfp-convergence-brazil/blob/master/Build_database/Brazil_2003_2009_panel.dta)
+  - [Data from Enterprise Surveys, "New_Comprehensive_May_1_2017" (.dta file)]
 - Code
-  - [select and keep countries](https://github.com/cmg777/firm-tfp-convergence-brazil/blob/master/Build_database/pdf_brazil_build_dataset_main.do)
+  - [select and keep countries](https://github.com/ergoro/Investment-climate-and-business-performance/blob/master/keep.do)
 - Outputs
   - [Dataset ready for generating vars (.dta file)]
 
@@ -32,7 +32,7 @@ This module contains four sections
 - Inputs
   - [Data from previous step (.dta file)]
 - Code
-  - [generating variables](https://github.com/cmg777/firm-tfp-convergence-brazil/blob/master/Estimating_TFP/pdf_brazil_tfp_main.do)
+  - [generating variables](https://github.com/ergoro/Investment-climate-and-business-performance/blob/master/genvars.do)
 - Outputs
   - [Dataset ready for cleaning (.dta file)]
   
@@ -40,7 +40,7 @@ This module contains four sections
 - Inputs
   - [Data from previous step (.dta file)]
 - Code
-  - [data cleaning](https://github.com/cmg777/firm-tfp-convergence-brazil/blob/master/Estimating_TFP/pdf_brazil_tfp_main.do)
+  - [data cleaning](https://github.com/ergoro/Investment-climate-and-business-performance/blob/master/clean.do)
 - Outputs
   - [Dataset ready (.dta file)]
    
@@ -48,7 +48,7 @@ This module contains four sections
 - Inputs
   - [Data from previous step (.dta file)]
 - Code
-  - [descriptive statistics](https://github.com/cmg777/firm-tfp-convergence-brazil/blob/master/Estimating_TFP/pdf_brazil_tfp_main.do)
+  - [descriptive statistics](https://github.com/ergoro/Investment-climate-and-business-performance/blob/master/describe.do)
 - Outputs
   - [Dataset ready for analysis (.dta file)]
  
@@ -57,7 +57,7 @@ This module contains four sections
 - [Inputs]
   - [Data from previous step (.dta file)]
 - Code:
-  - [Estimating TFP](https://github.com/cmg777/firm-tfp-convergence-brazil/blob/master/Distribution-Dynamics-analysis/%20ISIC18LC-acf/RUN_convergence123.m)
+  - [Estimating TFP](https://github.com/ergoro/Investment-climate-and-business-performance/blob/master/pf_tfp.do)
 - [Outputs]
   - [Dataset including TFP measuremnts, 7 methods (.dta file)]
 
@@ -66,7 +66,7 @@ This module contains four sections
 - [Inputs]
   - [Data from previous step (.dta file)]
 - Code:
-  - [Estimating relationship](https://github.com/cmg777/firm-tfp-convergence-brazil/blob/master/Distribution-Dynamics-analysis/%20ISIC18LC-acf/RUN_convergence123.m)
+  - [Estimating relationship](https://github.com/ergoro/Investment-climate-and-business-performance/blob/master/tfp_ic.do)
 - [Outputs]
   - [Dataset with analysis results (.dta file)]
   
@@ -75,6 +75,6 @@ This module contains four sections
 - [Inputs]
   - [Data from previous step (.dta file)]
 - Code:
-  - [IV procedure](https://github.com/cmg777/firm-tfp-convergence-brazil/blob/master/Distribution-Dynamics-analysis/%20ISIC18LC-acf/RUN_convergence123.m)
+  - [IV procedure](https://github.com/ergoro/Investment-climate-and-business-performance/blob/master/iv.do)
 - [Outputs]
   - [Dataset with final results (.dta file)]
